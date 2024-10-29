@@ -70,7 +70,13 @@ app.get("/json", (req, res) =>{
     });
   });
 
-
+    app.post("/name", (req, res) => {
+    var string = req.body.first+ ' '+req.body.last;
+    //var name = firstName.toString()+' '+lastName.toString()
+    res.json({
+      name : string
+    });
+  });
 
 
 
