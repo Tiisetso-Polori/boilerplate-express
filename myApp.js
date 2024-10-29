@@ -10,6 +10,10 @@ app.use((req, res, next) => {
     next(); // Important: move to the next middleware or route
 });
 
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
+  
 //console.log("Hello World");
 
 // app.get("/", (req, res) =>{
@@ -65,13 +69,6 @@ app.get("/json", (req, res) =>{
       name
     });
   });
-
-  bodyParser.urlencoded({extended: false});
-
-  app.get((req,res, next) => {
-
-
-  })
 
 
 
